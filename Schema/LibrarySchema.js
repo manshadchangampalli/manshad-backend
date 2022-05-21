@@ -5,7 +5,7 @@ const schema = mongoose.Schema(
         html:"String",
         css:"String",
         js:"String",
-        name:"String"
+        name:{type:"String",index:true}
     },
     {
         timestamps:true
