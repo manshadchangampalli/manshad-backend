@@ -7,7 +7,7 @@ const { urlencoded } = require("express");
 const bodyParser = require("body-parser")
 const cors = require('cors')
 const app = express()
-
+const port = process.env.PORT || 3001
 //middle wares
 app.use(bodyParser.json())
 app.use(cors({
@@ -19,6 +19,6 @@ app.use('/api/projects',Projects)
 app.use('/api/library',library)
 
 
-app.listen(3001,()=>{
+app.listen(port,()=>{
     console.log("server added 3001");
 })
